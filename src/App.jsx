@@ -1,5 +1,6 @@
 import Login from "./components/Auth/login";
-import Dashboard from './components/Dashboard/EmployeeDashboard'
+import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
+import AdminDashboard from './components/Dashboard/AdminDashboard'
 
 function App() {
   
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
       {/* <Login /> */}
-      <Dashboard />
+      <AdminDashboard/>
         
 
     </>
