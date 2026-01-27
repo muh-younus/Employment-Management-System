@@ -5,16 +5,27 @@ import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { getLocalStorage } from "./utils/localStorage";
 function App() {
-  useEffect(() => {
-    // setLocalStorage();
-    getLocalStorage()
-    
-  },[]);
+ 
+const handleLogin = (email,password)=>{
+  const [user, setUser] = useState()
 
+  if(email == 'admin@me.com' && password == '123'){
+
+    console.log("This is Admin")
+
+  }else if(email == 'user@me.com' && password == '123'){
+    
+    console.log("This is user")
+
+  }else{
+    
+    alert('This is invalid credentials')
+  }
+}
   return (
     <>
-      {/* <Login /> */}
-      <AdminDashboard />
+      <Login  handleLogin={handleLogin}/>
+      {/* <AdminDashboard /> */}
     </>
   );
 }
