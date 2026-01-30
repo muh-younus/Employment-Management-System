@@ -4,7 +4,7 @@ import NewTask from './NewTask'
 import CompletedTask from './CompleteTask'
 import FailedTask from './FailedTask'
 function TaskList({data}) {
-  console.log( "ali",data)
+  
   return (
     <div
       id="tasklist"
@@ -14,8 +14,25 @@ function TaskList({data}) {
       <NewTask/>
       <CompletedTask/>
       <FailedTask/> */}
-      {data.tasks.map((item)=>{
-        console.log('The item is ',item)
+      {data.tasks.map((item,ind)=>{
+        
+
+        if(item.active){
+          return <CompletedTask key={ind}/>
+        }
+
+        if(item.newTask){
+          return <NewTask key={ind}/>
+        }
+
+        if(item.completed){
+          return <CompletedTask key={ind}/>
+        }
+
+        if(item.failed){
+         return <FailedTask key={ind}/>
+        }
+
       })}
       
       

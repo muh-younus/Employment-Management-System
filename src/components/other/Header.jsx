@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Header({data}) {
-  console.log("The header data",data)
+  
   return (
 
     <div className="flex items-end justify-between">
