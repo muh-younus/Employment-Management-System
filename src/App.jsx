@@ -4,7 +4,7 @@ import Login from "./components/Auth/login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { AuthContext } from "./context/AuthProvider";
-// imp}ort { getLocalStorage } from "./utils/localStorage";
+
 function App() {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState()
@@ -18,8 +18,9 @@ function App() {
       const userData = JSON.parse(loggedInUser)
       setUser(userData.role)
       setLoggedInUserData(userData.data)
+      console.log("user Logged in")
     }
-  },[user])
+  },[])
 
   const handleLogin = (email, password) => {
     if (email == "admin@me.com" && password == "123") {
