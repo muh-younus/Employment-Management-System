@@ -2,3 +2,7 @@ body{
 
   background-color: black;
 }
+
+.alltask-scroll::-webkit-scrollbar-button{
+  display: none
+}

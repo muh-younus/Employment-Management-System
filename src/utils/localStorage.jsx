@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 const employees = [
   {
     id: 1,
@@ -150,7 +151,7 @@ const employees = [
 const admin = [
   {
     id: 1,
-    email: "admin1@example.com",
+    email: "admin@example.com",
     password: "123",
   },
   {
@@ -166,14 +167,26 @@ export const setLocalStorage = () =>{
 
    localStorage.setItem('employees',JSON.stringify(employees))
    localStorage.setItem('admin',JSON.stringify(admin)) 
+   
 }
+const hello = ()=>{
+  useEffect(()=>{
+  setLocalStorage()
+},[])
+
+
+}
+
 
 export const getLocalStorage = () =>{
 
-const employee = JSON.parse(localStorage.getItem('employees'))
-const admin = JSON.parse(localStorage.getItem('admin'))
+JSON.parse(localStorage.getItem('employees'))
+ JSON.parse(localStorage.getItem('admin'))
 
-
+ console.log("EMPLOYEES:", employees);
+  console.log("ADMIN:", admin);
 
 return {employees,admin}
 }
+
+

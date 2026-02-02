@@ -18,19 +18,19 @@ function TaskList({data}) {
         
 
         if(item.active){
-          return <CompletedTask key={ind}/>
+          return <CompletedTask key={ind} data={item}/>
         }
 
         if(item.newTask){
-          return <NewTask key={ind}/>
+          return <NewTask key={ind} data={item}/>
         }
 
         if(item.completed){
-          return <CompletedTask key={ind}/>
+          return <CompletedTask key={ind} data={item}/>
         }
 
         if(item.failed){
-         return <FailedTask key={ind}/>
+         return <FailedTask key={ind} data={item}/>
         }
 
       })}
