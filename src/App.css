@@ -4,5 +4,8 @@ body{
 }
 
 .alltask-scroll::-webkit-scrollbar-button{
-  display: none
+  background-color: blue;
+  overflow-y: hidden;
+  display: none;
+
 }

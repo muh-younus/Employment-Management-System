@@ -3,6 +3,7 @@ import {AuthContext} from "../../context/AuthProvider"
 import { getLocalStorage } from '../../utils/localStorage'
 
 
+
 function AllTask() {
    
 
@@ -21,7 +22,7 @@ function AllTask() {
             
 
         </div>
-        <div className='h-[80%] alltask-scroll overflow-auto'>
+        <div className=' alltask-scroll '>
 
        {apiData.employees.map(function(data,index ){
 
